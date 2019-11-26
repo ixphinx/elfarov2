@@ -9,7 +9,7 @@ app.set('views', path.join(__dirname + '/views'));
 app.set('view engine', 'ejs');
 
 //Server
-mongoose.connect('mongodb+srv://admin:huevon33@database-aizqn.gcp.mongodb.net/test?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://admin:huevon33@database-aizqn.gcp.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
     .then(()=> console.log('Database OK'))
     .catch(e => console.log(e));
 
@@ -19,6 +19,7 @@ mongoose.connect('mongodb+srv://admin:huevon33@database-aizqn.gcp.mongodb.net/te
 //Rutas
 app.use(require('./routes/index'));
 
+//Archivos estaticos
 app.use(express.static(path.join(__dirname, 'public')));
 
 
