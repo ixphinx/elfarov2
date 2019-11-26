@@ -19,10 +19,7 @@ mongoose.connect('mongodb+srv://admin:huevon33@database-aizqn.gcp.mongodb.net/te
 //Rutas
 app.use(require('./routes/index'));
 
-
-//Archivos estaticos
-app.use(express.static(path.join(__dirname + 'public')));
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 //Run dev
