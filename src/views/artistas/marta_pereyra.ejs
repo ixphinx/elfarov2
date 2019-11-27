@@ -1,77 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>
-    Material Kit by Creative Tim
-  </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- CSS Files -->
-  <link href="../assets/css/material-kit.css?v=2.0.6" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
-</head>
+<%- include('../_head.ejs') %>
 
 <body class="profile-page sidebar-collapse">
-  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
-    <div class="container">
-      <div class="navbar-translate">
-        <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
-          Material Kit </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">apps</i> Components
-            </a>
-            <div class="dropdown-menu dropdown-with-icons">
-              <a href="../index.html" class="dropdown-item">
-                <i class="material-icons">layers</i> All Components
-              </a>
-              <a href="https://demos.creative-tim.com/material-kit/docs/2.1/getting-started/introduction.html" class="dropdown-item">
-                <i class="material-icons">content_paste</i> Documentation
-              </a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)" onclick="scrollToDownload()">
-              <i class="material-icons">cloud_download</i> Download
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank" data-original-title="Follow us on Twitter">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank" data-original-title="Like us on Facebook">
-              <i class="fa fa-facebook-square"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Follow us on Instagram">
-              <i class="fa fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('../assets/img/city-profile.jpg');"></div>
+  <%- include('../_menu.ejs') %>
+
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('https://scontent.fmvd1-1.fna.fbcdn.net/v/t1.0-9/45931253_1662280180544583_8770838094816477184_o.jpg?_nc_cat=100&_nc_ohc=avHnDG_8G-cAQkXOwkEhwYJGhMbtArZbgnSNqETnWhOXww_GnUco-Noyw&_nc_ht=scontent.fmvd1-1.fna&oh=96fe87e63e2eeff8ed549f238f924b00&oe=5E7D108B');"></div>
   <div class="main main-raised">
     <div class="profile-content">
       <div class="container">
@@ -79,38 +14,39 @@
           <div class="col-md-6 ml-auto mr-auto">
             <div class="profile">
               <div class="avatar">
-                <img src="../assets/img/faces/christian.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                <img src="https://scontent.fmvd4-1.fna.fbcdn.net/v/t1.0-9/p960x960/66288529_2000934520012479_6770274892781715456_o.jpg?_nc_cat=103&_nc_ohc=XjhqWTxzxbAAQnQlvwIEAmvYu89Oe-Y5sfXM305IQ8SssorSxlz53hpxg&_nc_ht=scontent.fmvd4-1.fna&oh=110d69ff71a19d9f4b19b2d3b4895874&oe=5E861E93" alt="Circle Image" class="img-raised rounded-circle img-fluid">
               </div>
               <div class="name">
-                <h3 class="title">Christian Louboutin</h3>
-                <h6>Designer</h6>
-                <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
-                <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
+                <h3 class="title">Marta Pereyra</h3>
+                <h6>Artista plástica</h6>
+                <a href="https://www.facebook.com/marta.pereyra.12" class="btn btn-just-icon btn-link btn-dribbble"><i class="fab fa-facebook-square"></i></a>
+                <a href="" class="btn btn-just-icon btn-link btn-twitter"><i class="fab fa-twitter-square"></i></a>
+                <a href="" class="btn btn-just-icon btn-link btn-pinterest"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>
         </div>
         <div class="description text-center">
-          <p>An artist of considerable range, Chet Faker &#x2014; the name taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014; writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
+          <p>Artista uruguaya precisamente de la ciudad de Treinta y Tres. Caracterizada por su estilo
+            surrealista, siendo este expresado en diversidad de técnicas.</p>
         </div>
         <div class="row">
           <div class="col-md-6 ml-auto mr-auto">
             <div class="profile-tabs">
               <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
-                    <i class="material-icons">camera</i> Studio
+                  <a class="nav-link active" href="#tecnica1" role="tab" data-toggle="tab">
+                    <i class="material-icons">palette</i> Técnica 1
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#works" role="tab" data-toggle="tab">
-                    <i class="material-icons">palette</i> Work
+                  <a class="nav-link" href="#tecnica2" role="tab" data-toggle="tab">
+                    <i class="material-icons">palette</i> Técnica 2
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
-                    <i class="material-icons">favorite</i> Favorite
+                  <a class="nav-link" href="#tecnica3" role="tab" data-toggle="tab">
+                    <i class="material-icons">palette</i> Técnica 3
                   </a>
                 </li>
               </ul>
@@ -118,41 +54,41 @@
           </div>
         </div>
         <div class="tab-content tab-space">
-          <div class="tab-pane active text-center gallery" id="studio">
+          <div class="tab-pane active text-center gallery" id="tecnica1">
             <div class="row">
               <div class="col-md-3 ml-auto">
-                <img src="../assets/img/examples/studio-1.jpg" class="rounded">
-                <img src="../assets/img/examples/studio-2.jpg" class="rounded">
+                <img src="https://scontent.fmvd1-1.fna.fbcdn.net/v/t1.0-9/45931253_1662280180544583_8770838094816477184_o.jpg?_nc_cat=100&_nc_ohc=avHnDG_8G-cAQkXOwkEhwYJGhMbtArZbgnSNqETnWhOXww_GnUco-Noyw&_nc_ht=scontent.fmvd1-1.fna&oh=96fe87e63e2eeff8ed549f238f924b00&oe=5E7D108B" class="rounded">
+                <img src="https://scontent.fmvd1-1.fna.fbcdn.net/v/t31.0-8/13958205_876085385830737_5601635410807759321_o.jpg?_nc_cat=106&_nc_ohc=RFnWD5GnO-0AQmtnH4SRi-7U1PcUmhpQUUjwdMagowlMjLHYDhVsw7r7Q&_nc_ht=scontent.fmvd1-1.fna&oh=4bb69b7c618e3dac7d3ef521ca2c1320&oe=5E4A8327" class="rounded">
               </div>
               <div class="col-md-3 mr-auto">
-                <img src="../assets/img/examples/studio-5.jpg" class="rounded">
-                <img src="../assets/img/examples/studio-4.jpg" class="rounded">
+                <img src="https://scontent.fmvd1-1.fna.fbcdn.net/v/t31.0-8/p720x720/13914083_877294475709828_5533111773115893341_o.jpg?_nc_cat=111&_nc_ohc=0C4BJFvNZycAQmMj3CBrgdr4LG4RtZS17NJsrKlbzZDtuWWilLZxmookQ&_nc_ht=scontent.fmvd1-1.fna&oh=92f80f1ad7a9c892e7dd3dad5cec12e6&oe=5E48FFFA" class="rounded">
+                <img src="https://scontent.fmvd1-1.fna.fbcdn.net/v/t31.0-8/p720x720/13909024_876728255766450_675782480518177149_o.jpg?_nc_cat=101&_nc_ohc=H6--9V1BHqUAQkOoXmHncXAQyfs-rjClq0pkPwzsw5g7cLkMBDjYIEMAQ&_nc_ht=scontent.fmvd1-1.fna&oh=1051267ebec53b45e8ae96317cf5d354&oe=5E40EEB4" class="rounded">
               </div>
             </div>
           </div>
-          <div class="tab-pane text-center gallery" id="works">
+          <div class="tab-pane text-center gallery" id="tecnica2">
             <div class="row">
               <div class="col-md-3 ml-auto">
-                <img src="../assets/img/examples/olu-eletu.jpg" class="rounded">
-                <img src="../assets/img/examples/clem-onojeghuo.jpg" class="rounded">
-                <img src="../assets/img/examples/cynthia-del-rio.jpg" class="rounded">
+                <img src="https://scontent.fmvd1-1.fna.fbcdn.net/v/t31.0-8/p720x720/13920513_876138825825393_8443387790294364483_o.jpg?_nc_cat=101&_nc_ohc=58V-h372XJAAQlIsaYIpX8jRGSZNcYTqWzDINV1rhN5Wl_3pD2dIVPzeA&_nc_ht=scontent.fmvd1-1.fna&oh=c8c6ab147013c51d88ded70a811f8a4d&oe=5E3E6800" class="rounded">
+                <img src="https://scontent.fmvd1-1.fna.fbcdn.net/v/t31.0-8/10257470_758244697614807_8299469057710160327_o.jpg?_nc_cat=105&_nc_ohc=AOFnrzmIHNcAQmXFFZ34l5GrATnMnkS1grA9o5N2AIYlSyT9xRvjUSg7A&_nc_ht=scontent.fmvd1-1.fna&oh=5552104801732e34c265180017501e4e&oe=5E817E73" class="rounded">
+                <img src="https://scontent.fmvd1-1.fna.fbcdn.net/v/t31.0-8/p720x720/11947937_719993388106605_1327975523704902507_o.jpg?_nc_cat=100&_nc_ohc=GI2Mavmn-6cAQlchf3bqXRiieFbkGn4j1vBAERBYmAxk_fF5fQKL9mJTg&_nc_ht=scontent.fmvd1-1.fna&oh=9cd45876173de1f51b09a96f451ba269&oe=5E41783C" class="rounded">
               </div>
               <div class="col-md-3 mr-auto">
-                <img src="../assets/img/examples/mariya-georgieva.jpg" class="rounded">
-                <img src="../assets/img/examples/clem-onojegaw.jpg" class="rounded">
+                <img src="https://scontent.fmvd1-1.fna.fbcdn.net/v/t31.0-8/p720x720/12045467_737325886373355_5362697852197208237_o.jpg?_nc_cat=108&_nc_ohc=tLTq55K8ROgAQnbBKdn2z5BGIVDSna6wSSll4tljuo2bUpuhpW3m9sxPQ&_nc_ht=scontent.fmvd1-1.fna&oh=7e4204f0a35bfb46c81bdc1099349570&oe=5E4A4A2A" class="rounded">
+                <img src="https://scontent.fmvd1-1.fna.fbcdn.net/v/t31.0-8/p720x720/12087202_737322509707026_2550201389864869786_o.jpg?_nc_cat=109&_nc_ohc=ImOB9rIGyc0AQnhcpXPD7kXDvE6Qzfut5-vQ-aBDCquMTRWKLm_QN37mw&_nc_ht=scontent.fmvd1-1.fna&oh=4ed7785b1b5299db4f1bd4e90987df24&oe=5E87944B" class="rounded">
               </div>
             </div>
           </div>
-          <div class="tab-pane text-center gallery" id="favorite">
+          <div class="tab-pane text-center gallery" id="tecnica3">
             <div class="row">
               <div class="col-md-3 ml-auto">
-                <img src="../assets/img/examples/mariya-georgieva.jpg" class="rounded">
-                <img src="../assets/img/examples/studio-3.jpg" class="rounded">
+                <img src="https://scontent.fmvd1-1.fna.fbcdn.net/v/t31.0-8/p720x720/11224389_737318873040723_6771315805049886582_o.jpg?_nc_cat=105&_nc_ohc=pXg4q_6KjAoAQlQeZdy3iZUreKxv1SOyobuuU9uh6DCBWehn_hqT-FxjQ&_nc_ht=scontent.fmvd1-1.fna&oh=2e30acdbe7717bbc0504bf5283d8c6f8&oe=5E88CD6B" class="rounded">
+                <img src="https://scontent.fmvd1-1.fna.fbcdn.net/v/t31.0-8/p720x720/11090915_719908298115114_8011143074459295900_o.jpg?_nc_cat=105&_nc_ohc=1_e0XHSL9CMAQmMxpbFtMdXo8uvZLyG4d4Igt82VsHunPa5fk47v1-7YA&_nc_ht=scontent.fmvd1-1.fna&oh=eba3b6dd5d7b730bd5f054d6f9459e88&oe=5E781729" class="rounded">
               </div>
               <div class="col-md-3 mr-auto">
-                <img src="../assets/img/examples/clem-onojeghuo.jpg" class="rounded">
-                <img src="../assets/img/examples/olu-eletu.jpg" class="rounded">
-                <img src="../assets/img/examples/studio-1.jpg" class="rounded">
+                <img src="https://scontent.fmvd1-1.fna.fbcdn.net/v/t31.0-8/p720x720/1495306_594944683944810_2276018087635151307_o.jpg?_nc_cat=106&_nc_ohc=PwQAn6TyalkAQn-x8lgLzQ7udFxTQAwjtub8hK_zzQqftM_TQ8953Dt_Q&_nc_ht=scontent.fmvd1-1.fna&oh=b5e8a18d756ba8b58f22a8d69c3f0a94&oe=5E7D0295" class="rounded">
+                <img src="https://scontent.fmvd1-1.fna.fbcdn.net/v/t31.0-8/p720x720/1404874_594943830611562_1299989737101121016_o.jpg?_nc_cat=108&_nc_ohc=VXpvDpeEnJYAQlir7yNOhsumf7mBGy9IhEJEUjMten5FCc-13boEZHG7Q&_nc_ht=scontent.fmvd1-1.fna&oh=ce8f92d5f32ef9679541b517b72b26e8&oe=5E48E536" class="rounded">
+                <img src="https://scontent.fmvd1-1.fna.fbcdn.net/v/t31.0-8/p720x720/1912140_488466884592591_125701289_o.jpg?_nc_cat=110&_nc_ohc=LmenpbJRWKcAQnXZxxu8pHs5uaLqgn5xdXbPHfki7qBl2NZkl5kq1YnCg&_nc_ht=scontent.fmvd1-1.fna&oh=143fa0953bbf664ecf2a643f7ebb1411&oe=5E81554B" class="rounded">
               </div>
             </div>
           </div>
