@@ -13,5 +13,9 @@ router.get('/pintura', (req, res)=>{
     res.render('secciones/pintura.ejs')
 });
 
+router.get('/marta_pereyra', (req, res)=>{
+    res.render('artistas/marta_pereyra.ejs')
+});
+
 
 module.exports = router;
