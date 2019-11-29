@@ -21,11 +21,14 @@ passport.use('local-signup', new LocalStrategy({
     const user = await User.findOne({ 'email': email })
     console.log(user)
     if (user) {
-        return done(null, false, req.flash('signupMessage', 'The Email is already Taken.'));
+        return done(null, false, req.flash('signupMessage', 'El email ya fue registrado.'));
     } else {
         const {nombre, apellido}= req.body;
-        const newUser = new User ({nombre, apellido, email, password});
+        const newUser = new User ({nombre, apellido, email});
+        newUser.password = newUser.encryptPassword(password);
+        console.log(newUser);
         await newUser.save();
+        done(null, newUser);
     }
 }));
 
