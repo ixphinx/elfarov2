@@ -6,7 +6,6 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
 const morgan = require('morgan');
-const { mongodb } = require('./keys');
 
 //Configuracion
 app.set('port', process.env.PORT || 3000);

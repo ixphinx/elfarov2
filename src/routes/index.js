@@ -1,4 +1,5 @@
 const express = require('express');
+const passport = require('passport');
 const router = express.Router();
 
 router.get('/', (req, res)=>{
@@ -13,29 +14,29 @@ router.get('/pintura', (req, res)=>{
     res.render('secciones/pintura.ejs')
 });
 
-router.get('/marta_pereyra', (req, res)=>{
-    res.render('artistas/marta_pereyra.ejs')
+router.get('/login_fail', (req, res)=>{
+    res.render('login_fail')
 });
 
 //Login routes
 router.get('/signup', (req, res, next) => {
-  res.render('signup');
+  res.render('register');
 });
 
 router.post('/signup', passport.authenticate('local-signup', {
-  successRedirect: '/profile',
-  failureRedirect: '/signup',
+  successRedirect: '/profile_panel',
+  failureRedirect: '/register',
   failureFlash: true
 })); 
 
-router.get('/signin', (req, res, next) => {
-  res.render('signin');
+router.get('/login', (req, res, next) => {
+  res.render('login');
 });
 
 
 router.post('/signin', passport.authenticate('local-signin', {
   successRedirect: '/profile',
-  failureRedirect: '/signin',
+  failureRedirect: '/login_fail',
   failureFlash: true
 }));
 
