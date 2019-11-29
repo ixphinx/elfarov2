@@ -18,14 +18,25 @@ router.get('/login_fail', (req, res)=>{
     res.render('login_fail')
 });
 
+
+
 //Login routes
 router.get('/signup', (req, res, next) => {
   res.render('register');
 });
+router.get('/register', (req, res, next)=>{
+    res.render('register')
+});
+router.get('/register_fail', (req, res, next)=>{
+    res.render('register_fail')
+});
+router.get('/profile_panel', (req, res, next)=>{
+    res.render('profile_panel')
+});
 
 router.post('/signup', passport.authenticate('local-signup', {
   successRedirect: '/profile_panel',
-  failureRedirect: '/register',
+  failureRedirect: '/register_fail',
   failureFlash: true
 })); 
 
@@ -34,7 +45,7 @@ router.get('/login', (req, res, next) => {
 });
 
 
-router.post('/signin', passport.authenticate('local-signin', {
+router.post('/login', passport.authenticate('local-signin', {
   successRedirect: '/profile',
   failureRedirect: '/login_fail',
   failureFlash: true
