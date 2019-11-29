@@ -17,7 +17,7 @@ passport.use('local-signup', new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password',
     passReqToCallback: true
-}, async (req, email, password, done, name) => {
+}, async (req, email, password, done) => {
     const user = await User.findOne({ 'email': email })
     console.log(user)
     if (user) {
