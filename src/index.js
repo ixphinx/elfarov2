@@ -35,10 +35,11 @@ app.use(passport.session());
 app.use((req, res, next) => {
     app.locals.signinMessage = req.flash('signinMessage');
     app.locals.signupMessage = req.flash('signupMessage');
-    app.locals.user = req.user;
-    console.log(app.locals)
+    app.locals.user = req.user || null;
     next();
 });
+
+
 
 //Rutas
 app.use(require('./routes/index'));

@@ -1,6 +1,8 @@
 const express = require('express');
 const passport = require('passport');
 const router = express.Router();
+const {isAuthenticated} = require('../passport/auth');
+const user = require('../models/database');
 
 router.get('/', (req, res)=>{
     res.render('index.ejs');
@@ -10,7 +12,7 @@ router.get('/default', (req, res)=>{
     res.render('default.ejs')
 });
 
-router.get('/pintura', (req, res)=>{
+router.get('/pintura', isAuthenticated, (req, res)=>{
     res.render('secciones/pintura.ejs')
 });
 
@@ -30,13 +32,13 @@ router.get('/register', (req, res, next)=>{
 router.get('/register_fail', (req, res, next)=>{
     res.render('register_fail')
 });
-router.get('/profile_panel', (req, res, next)=>{
+router.get('/profile_panel', isAuthenticated, (req, res, next)=>{
     res.render('profile_panel')
 });
 
 router.post('/signup', passport.authenticate('local-signup', {
-  successRedirect: '/profile_panel',
-  failureRedirect: '/register_fail',
+  successRedirect: 'profile_panel',
+    failureRedirect: '/register_fail',
   failureFlash: true
 })); 
 
@@ -61,11 +63,4 @@ router.get('/logout', (req, res, next) => {
 });
 
 
-function isAuthenticated(req, res, next) {
-  if(req.isAuthenticated()) {
-    return next();
-  }
-
-  res.redirect('/')
-}
 module.exports = router;
