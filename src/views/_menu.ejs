@@ -15,8 +15,13 @@
 		<div class="collapse navbar-collapse">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="/login">
-						 Login
+					<a class="nav-link" href="/<% if (user = !null) {%>profile<%} else {%>login<%}%>">
+						 Login/Perfil
+					</a>
+				</li>
+                <li class="nav-item">
+					<a class="nav-link" href="/register">
+						 Registrarse
 					</a>
 				</li>
 				<li class="dropdown nav-item">
@@ -64,8 +69,8 @@
 					</div>
 				</li>
                 <li class="nav-item">
-					<a class="nav-link" href="/signup">
-						 Registrarse
+					<a class="nav-link" href="/logout">
+						 Salir
 					</a>
 				</li>
 			</ul>
