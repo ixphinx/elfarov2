@@ -21,7 +21,7 @@
                 <h3 class="title"><%= user.nombre + ' '+ user.apellido %></h3><a class="btn btn-primary" href="/profile_panel" role="button">Editar perfil</a>
                 <h6><%= user.genero %></h6>
                 <a href="<%= user.facebook %>" class="btn btn-just-icon btn-link btn-dribbble"><i class="fab fa-facebook-square"></i></a>
-                <a href="" class="btn btn-just-icon btn-link btn-twitter"><i class="fab fa-twitter-square"></i></a>
+                <a href="<%= user.youtube %>" class="btn btn-just-icon btn-link btn-twitter"><i class="fab fa-youtube"></i></a>
                 <a href="<%= user.instagram %>" class="btn btn-just-icon btn-link btn-pinterest"><i class="fab fa-instagram"></i></a>
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick" />
@@ -50,11 +50,13 @@
                     <i class="fas fa-video"></i> Videos
                   </a>
                 </li>
+                <!--
                 <li class="nav-item">
                   <a class="nav-link" href="#musica" role="tab" data-toggle="tab">
                     <i class="fas fa-music"></i> Musica 
                   </a>
                 </li>
+                -->
               </ul>
             </div>
           </div>
@@ -62,7 +64,7 @@
         <div class="tab-content tab-space">
           <div class="tab-pane active text-center gallery" id="imagenes">
             <div class="row">
-              <div class="col-md-3 ml-auto">
+              <div class="container">
                 <img src="<%= user.imagenes %>" class="rounded">
                 <img src="<%= user.img2 %>" class="rounded">
                 <img src="<%= user.img3 %>" class="rounded">
@@ -74,7 +76,7 @@
                 <img src="<%= user.img9 %>" class="rounded">
                 <img src="<%= user.img10 %>" class="rounded">
               </div>
-              <div class="col-md-3 mr-auto">
+              <div class="container">
                 <img src="<%= user.img11 %>" class="rounded">
                 <img src="<%= user.img12 %>" class="rounded">
                 <img src="<%= user.img13 %>" class="rounded">
@@ -86,7 +88,7 @@
                 <img src="<%= user.img19 %>" class="rounded">
                 <img src="<%= user.img20 %>" class="rounded">
               </div>
-              <div class="col-md-3 mr-auto">
+              <div class="container">
                 <img src="<%= user.img21 %>" class="rounded">
                 <img src="<%= user.img22 %>" class="rounded">
                 <img src="<%= user.img23 %>" class="rounded">
@@ -102,27 +104,38 @@
           </div>
           <div class="tab-pane text-center gallery" id="videos">
             <div class="row">
-              <div class="col-md-3 ml-auto">
-                <img src="<%= user.videos %>" class="rounded">
-                <img src="" class="rounded">
-                <img src="" class="rounded">
-              </div>
-              <div class="col-md-3 mr-auto">
-                <img src="" class="rounded">
-                <img src="" class="rounded">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane text-center gallery" id="musica">
-            <div class="row">
-              <div class="col-md-3 ml-auto">
-                <img src="<%= user.musica %>" class="rounded">
-                <img src="" class="rounded">
-              </div>
-              <div class="col-md-3 mr-auto">
-                <img src="" class="rounded">
-                <img src="" class="rounded">
-                <img src="" class="rounded">
+              <div class="container">
+              <iframe width="560" height="315" src="<%= user.videos %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <%=user.vimg1%>
+              <%= user.vimg2 %>
+              <%= user.vimg3 %>
+              <%= user.vimg4 %>
+              <%= user.vimg5 %>
+              <%= user.vimg6 %>
+              <%= user.vimg7 %>
+              <%= user.vimg8 %>
+              <%= user.vimg9 %>
+              <%= user.vimg10 %>
+              <%= user.vimg11 %>
+              <%= user.vimg12 %>
+              <%= user.vimg13 %>
+              <%= user.vimg14 %>
+              <%= user.vimg15 %>
+              <%= user.vimg16 %>
+              <%= user.vimg17 %>
+              <%= user.vimg18 %>
+              <%= user.vimg19 %>
+              <%= user.vimg20 %>
+              <%= user.vimg21 %>
+              <%= user.vimg22 %>
+              <%= user.vimg23 %>
+              <%= user.vimg24 %>
+              <%= user.vimg25 %>
+              <%= user.vimg26 %>
+              <%= user.vimg27 %>
+              <%= user.vimg28 %>
+              <%= user.vimg29 %>
+              <%= user.vimg30 %>
               </div>
             </div>
           </div>
