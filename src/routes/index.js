@@ -11,6 +11,79 @@ router.get('/', (req, res) => {
     });
 });
 
+//secciones---------------------------------------
+//--------------MUSICA----------------------------
+router.get('/rock', (req, res) => {
+    user.find({genero: 'Rock'}, function (err, doc) {
+        res.render('secciones/secciones', { 'docs': doc });
+        console.log(doc);
+    });
+});
+router.get('/hiphop', (req, res) => {
+    user.find({genero: 'Hip-hop'}, function (err, doc) {
+        res.render('secciones/secciones', { 'docs': doc });
+        console.log(doc);
+    });
+});
+router.get('/metal', (req, res) => {
+    user.find({genero: 'Metal'}, function (err, doc) {
+        res.render('secciones/secciones', { 'docs': doc });
+        console.log(doc);
+    });
+});
+router.get('/folkclore', (req, res) => {
+    user.find({genero: 'Folkclore'}, function (err, doc) {
+        res.render('secciones/secciones', { 'docs': doc });
+        console.log(doc);
+    });
+});
+router.get('/clasica', (req, res) => {
+    user.find({genero: 'Clásica'}, function (err, doc) {
+        res.render('secciones/secciones', { 'docs': doc });
+        console.log(doc);
+    });
+});
+//-------------------------------------------------
+//---------ARTES VISUALES--------------------------
+router.get('/pintura', (req, res) => {
+    user.find({genero: 'Pintura'}, function (err, doc) {
+        res.render('secciones/secciones', { 'docs': doc });
+        console.log(doc);
+    });
+});
+router.get('/escultura', (req, res) => {
+    user.find({genero: 'Escultura'}, function (err, doc) {
+        res.render('secciones/secciones', { 'docs': doc });
+        console.log(doc);
+    });
+});
+router.get('/tallado', (req, res) => {
+    user.find({genero: 'Tallado'}, function (err, doc) {
+        res.render('secciones/secciones', { 'docs': doc });
+        console.log(doc);
+    });
+});
+router.get('/fotografia', (req, res) => {
+    user.find({genero: 'Fotografía'}, function (err, doc) {
+        res.render('secciones/secciones', { 'docs': doc });
+        console.log(doc);
+    });
+});
+router.get('/animacion', (req, res) => {
+    user.find({genero: 'Animación 3D'}, function (err, doc) {
+        res.render('secciones/secciones', { 'docs': doc });
+        console.log(doc);
+    });
+});
+router.get('/audio_visual', (req, res) => {
+    user.find({genero: 'Audio Visual'}, function (err, doc) {
+        res.render('secciones/secciones', { 'docs': doc });
+        console.log(doc);
+    });
+});
+
+//-------------------------------------------------
+
 router.get('/default', (req, res) => {
     res.render('default.ejs')
 });
@@ -26,7 +99,8 @@ router.get('/login_fail', (req, res) => {
 router.post('/profile', async (req, res) => {
     const { id, 
         nombre, 
-        apellido, 
+        apellido,
+        nart, 
         pais, 
         ciudad, 
         direccion,
@@ -106,6 +180,7 @@ router.post('/profile', async (req, res) => {
     await user.findByIdAndUpdate(id, {
         nombre,
         apellido,
+        nart,
         pais,
         ciudad,
         direccion,

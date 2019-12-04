@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../_head.ejs')%>
+<script type="text/javascript">
+     alert('<%= docs %>');
+     </script>
+
+<body class="landing-page sidebar-collapse">
+	<%- include('../_menu.ejs')%>
+     
+
+	<div class="page-header header-filter" data-parallax="true"
+		style="background-image: url('../assets/img/lighthouse.jpg')">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h1 class="title">Tu lugar de descubrimiento...</h1>
+					<br>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class="main main-raised">
+			<div class="container">
+				<div class="section text-center">
+					
+						<% for(var i=0; i < docs.length; i++) { %>
+						<form method="POST" action="/user">
+                        <div class="card-body">
+                            <img src="<%= docs[i].perfil%>" width="100" alt="100" alt="..." class="img-thumbnail">
+                            <a><%= docs[i].nart %></a>
+							<a><%= docs[i].nombre + ' ' + docs[i].apellido %></a>
+                            <button type="submit" class="btn btn-primary btn-sm">Ver artista</button>
+                            <input type="text" name="email" value="<%= docs[i].email%>" style="display:none"></br>
+                        </div>
+						</form>
+						<% } %>
+					
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<%- include('../_footer.ejs')%>
+</body>
+
+</html>
