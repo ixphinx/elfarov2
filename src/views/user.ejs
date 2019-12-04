@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('_head.ejs') %>
+
+<body class="profile-page sidebar-collapse">
+  <%- include('_menu.ejs') %>
+
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('<%= docs[0].portada %>');"></div>
+ 
+  <div class="main main-raised">
+    <div class="profile-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto">
+            <div class="profile">
+              <div class="avatar">
+                <img src="<%= docs[0].perfil %>" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+              </div>
+              <div class="name">
+                <h3 class="title"><%= docs[0].nombre + ' '+ docs[0].apellido %></h3>
+                <h6><%= docs[0].genero %></h6>
+                <a href="<%= docs[0].facebook %>" class="btn btn-just-icon btn-link btn-dribbble"><i class="fab fa-facebook-square"></i></a>
+                <a href="<%= docs[0].youtube %>" class="btn btn-just-icon btn-link btn-twitter"><i class="fab fa-youtube"></i></a>
+                <a href="<%= docs[0].instagram %>" class="btn btn-just-icon btn-link btn-pinterest"><i class="fab fa-instagram"></i></a>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="<%= docs[0].paypal %>" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_UY/i/scr/pixel.gif" width="1" height="1" />
+</form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="description text-center">
+          <p><%= docs[0].f_tecnica%></p>
+        </div>
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto">
+            <div class="profile-tabs">
+              <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#imagenes" role="tab" data-toggle="tab">
+                    <i class="far fa-images"></i> Imágenes
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#videos" role="tab" data-toggle="tab">
+                    <i class="fas fa-video"></i> Videos
+                  </a>
+                </li>
+                <!--
+                <li class="nav-item">
+                  <a class="nav-link" href="#musica" role="tab" data-toggle="tab">
+                    <i class="fas fa-music"></i> Musica 
+                  </a>
+                </li>
+                -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content tab-space">
+          <div class="tab-pane active text-center gallery" id="imagenes">
+            <div class="row">
+              <div class="container">
+                <img src="<%= docs[0].imagenes %>" class="rounded">
+                <img src="<%= docs[0].img2 %>" class="rounded">
+                <img src="<%= docs[0].img3 %>" class="rounded">
+                <img src="<%= docs[0].img4 %>" class="rounded">
+                <img src="<%= docs[0].img5 %>" class="rounded">
+                <img src="<%= docs[0].img6 %>" class="rounded">
+                <img src="<%= docs[0].img7 %>" class="rounded">
+                <img src="<%= docs[0].img8 %>" class="rounded">
+                <img src="<%= docs[0].img9 %>" class="rounded">
+                <img src="<%= docs[0].img10 %>" class="rounded">
+              </div>
+              <div class="container">
+                <img src="<%= docs[0].img11 %>" class="rounded">
+                <img src="<%= docs[0].img12 %>" class="rounded">
+                <img src="<%= docs[0].img13 %>" class="rounded">
+                <img src="<%= docs[0].img14 %>" class="rounded">
+                <img src="<%= docs[0].img15 %>" class="rounded">
+                <img src="<%= docs[0].img16 %>" class="rounded">
+                <img src="<%= docs[0].img17 %>" class="rounded">
+                <img src="<%= docs[0].img18 %>" class="rounded">
+                <img src="<%= docs[0].img19 %>" class="rounded">
+                <img src="<%= docs[0].img20 %>" class="rounded">
+              </div>
+              <div class="container">
+                <img src="<%= docs[0].img21 %>" class="rounded">
+                <img src="<%= docs[0].img22 %>" class="rounded">
+                <img src="<%= docs[0].img23 %>" class="rounded">
+                <img src="<%= docs[0].img24 %>" class="rounded">
+                <img src="<%= docs[0].img25 %>" class="rounded">
+                <img src="<%= docs[0].img26 %>" class="rounded">
+                <img src="<%= docs[0].img27 %>" class="rounded">
+                <img src="<%= docs[0].img28 %>" class="rounded">
+                <img src="<%= docs[0].img29 %>" class="rounded">
+                <img src="<%= docs[0].img30 %>" class="rounded">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane text-center gallery" id="videos">
+            <div class="row">
+              <div class="container">
+              <% if (docs[0].video == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].videos %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg2 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg2 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+               <% if (docs[0].vimg3 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg3 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg4 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg4 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg5 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg5 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg6 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg6 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg7 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg7 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg8 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg8 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg9 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg9 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg10 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg10 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg11 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg11 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg12 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg12 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg13 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg13 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg14 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg14 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg15 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg15 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg16 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg16 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg17 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg17 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg18 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg18 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg19 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg19 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg20 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg20 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg21 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg21 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg22 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg22 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg23 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg23 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg24 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg24 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg25 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg25 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg26 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg26 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg27 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg27 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg28 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg28 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg29 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg29 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              <% if (docs[0].vimg30 == "") {%><%} else {%><iframe width="560" height="315" src="<%= docs[0].vimg30 %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><%}%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%- include('_footer.ejs')%>
+</body>
+
+</html>

@@ -90,20 +90,76 @@
 				<div class="section text-center">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="card">
+							<form method="POST" action="/user">
+                            <div class="card">
 								<div class="card-header card-header-text card-header-primary" >
 									<div class="card-text">
-										<h4 class="card-title">Marta Pereyra</h4>
+										<h4 class="card-title"><%= docs[docs.length -1].nombre + ' ' + docs[docs.length -1].apellido %></h4>
 									</div>
 								</div>
 								<div class="card-body">
-                                <img width="200" height="200" src="https://scontent.fmvd4-1.fna.fbcdn.net/v/t1.0-9/p960x960/66288529_2000934520012479_6770274892781715456_o.jpg?_nc_cat=103&_nc_ohc=XjhqWTxzxbAAQnQlvwIEAmvYu89Oe-Y5sfXM305IQ8SssorSxlz53hpxg&_nc_ht=scontent.fmvd4-1.fna&oh=110d69ff71a19d9f4b19b2d3b4895874&oe=5E861E93" class="img-fluid" alt="Responsive image">
+                                <img width="200" height="200" src="<%= docs[docs.length -1].perfil %>" class="img-fluid" alt="Responsive image">
                                 </br>
-									Artista uruguaya mas propiamente de la ciudad de Treinta y Tres. Caracterizada por su estilo
-                                    Surrealismo, siendo este expresado en diversidad de técnicas.
-                                    </br><a href="/marta_pereyra" class="btn btn-primary">Entrar</a>
+									<%= docs[docs.length -1].f_tecnica%>
+                                    <input type="text" name="email" value="<%= docs[docs.length -1].email%>" style="display:none"></br>
+							        <button type="submit" class="btn btn-primary">Ver artista</button>
 								</div>
 							</div>
+                            </form>
+						</div>
+                        <div class="col-md-6">
+							<form method="POST" action="/user">
+                            <div class="card">
+								<div class="card-header card-header-text card-header-primary" >
+									<div class="card-text">
+										<h4 class="card-title"><%= docs[docs.length -2].nombre + ' ' + docs[docs.length -2].apellido %></h4>
+									</div>
+								</div>
+								<div class="card-body">
+                                <img width="200" height="200" src="<%= docs[docs.length -2].perfil %>" class="img-fluid" alt="Responsive image">
+                                </br>
+									<%= docs[docs.length -2].f_tecnica%>
+                                    <input type="text" name="email" value="<%= docs[docs.length -2].email%>" style="display:none"></br>
+							        <button type="submit" class="btn btn-primary">Ver artista</button>
+								</div>
+							</div>
+                            </form>
+						</div>
+                        <div class="col-md-6">
+							<form method="POST" action="/user">
+                            <div class="card">
+								<div class="card-header card-header-text card-header-primary" >
+									<div class="card-text">
+										<h4 class="card-title"><%= docs[docs.length -3].nombre + ' ' + docs[docs.length -3].apellido %></h4>
+									</div>
+								</div>
+								<div class="card-body">
+                                <img width="200" height="200" src="<%= docs[docs.length -3].perfil %>" class="img-fluid" alt="Responsive image">
+                                </br>
+									<%= docs[docs.length -3].f_tecnica%>
+                                    <input type="text" name="email" value="<%= docs[docs.length -3].email%>" style="display:none"></br>
+							        <button type="submit" class="btn btn-primary">Ver artista</button>
+								</div>
+							</div>
+                            </form>
+						</div>
+                        <div class="col-md-6">
+							<form method="POST" action="/user">
+                            <div class="card">
+								<div class="card-header card-header-text card-header-primary" >
+									<div class="card-text">
+										<h4 class="card-title"><%= docs[docs.length -4].nombre + ' ' + docs[docs.length -4].apellido %></h4>
+									</div>
+								</div>
+								<div class="card-body">
+                                <img width="200" height="200" src="<%= docs[docs.length -4].perfil %>" class="img-fluid" alt="Responsive image">
+                                </br>
+									<%= docs[docs.length -4].f_tecnica%>
+                                    <input type="text" name="email" value="<%= docs[docs.length -4].email%>" style="display:none"></br>
+							        <button type="submit" class="btn btn-primary">Ver artista</button>
+								</div>
+							</div>
+                            </form>
 						</div>
 					</div>
 				</div>
