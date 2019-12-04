@@ -386,7 +386,7 @@
 								<textarea class="form-control" name="f_tecnica" id="f_tecnica" rows="1"><%= user.f_tecnica %></textarea>
 							</div>
                             <div class="form-group">
-								<label for="exampleInputEmail1">Links de tus videos</label>
+								<label for="exampleInputEmail1">Links de tus videos</label><button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Para insertar videos desde youtube deverás copiar el enlace del video y luego suplantar '/watch?v=' por '/embed/' y listo!"><i class="fas fa-question-circle" style="font-size: 21px;"></i></button>
 								<input type="text" name="videos" class="form-control" id="videos" value="<%= user.videos %>" style="display: inline;"><button type="button" name="vbtnimg1" id="vbtnimg1" class="btn btn-dark" style="display: inline" onclick="vagregar(1)">+</button>
                                 <input type="text" name="vimg2" class="form-control" id="vimg2" value="<%= user.vimg2 %>" style="display: none;"><button type="button" class="btn btn-dark" name="vbtnimg2" id="vbtnimg2" style="display: none" onclick="vagregar(2)">+</button>
                                 <input type="text" name="vimg3" class="form-control" id="vimg3" value="<%= user.vimg3 %>" style="display: none;"><button type="button" class="btn btn-dark" name="vbtnimg3" id="vbtnimg3" style="display: none" onclick="vagregar(3)">+</button>
