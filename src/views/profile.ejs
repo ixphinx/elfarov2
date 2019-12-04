@@ -15,7 +15,7 @@
           <div class="col-md-6 ml-auto mr-auto">
             <div class="profile">
               <div class="avatar">
-                <img src="<%= user.perfil %>" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                <img src="<%= user.perfil %>" srcset="<%= user.perfil %>, https://icon-library.net/images/default-profile-icon/default-profile-icon-24.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
               </div>
               <div class="name">
                 <h3 class="title"><%= user.nombre + ' '+ user.apellido %></h3><a class="btn btn-primary" href="/profile_panel" role="button">Editar perfil</a>

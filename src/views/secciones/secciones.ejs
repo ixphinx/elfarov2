@@ -24,7 +24,7 @@
 						<% for(var i=0; i < docs.length; i++) { %>
 						<form method="POST" action="/user">
                         <div class="card-body">
-                            <img src="<%= docs[i].perfil%>" width="100" alt="100" alt="..." class="img-thumbnail">
+                            <img src="<%= docs[i].perfil%>" srcset="<%= docs[i].perfil%>, https://icon-library.net/images/default-profile-icon/default-profile-icon-24.jpg" width="100" alt="100" alt="..." class="img-thumbnail">
                             <a><%= docs[i].nart %></a>
 							<a><%= docs[i].nombre + ' ' + docs[i].apellido %></a>
                             <button type="submit" class="btn btn-primary btn-sm">Ver artista</button>
